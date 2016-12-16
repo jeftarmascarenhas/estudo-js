@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carousel css</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="carousebox active">
+    <div class="buttons">
+      <button type="button" name="prev" class="prev"><<span class="offscreen">Previous</span> </button>
+      <button type="button" name="next" class="next">><span class="offscreen">Next</span> </button>
+    </div>
+    <ul class="content">
+      <li class="current">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </div>
+
+<script type="text/javascript" src="js/carousel.js"></script>
+<script>
+  let show = new Carousel().showSelector();
+  console.log(show);
+</script>
+</body>
+</html>
