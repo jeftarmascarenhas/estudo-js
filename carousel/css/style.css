@@ -19,7 +19,7 @@
 
 .carousebox button {
   border: 0;
-  display: none;
+  visibility: hidden;
 }
 
 .content {
@@ -41,14 +41,19 @@
 .active li{
   position: absolute;
   top: 200px;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .active li.current {
-  top: 30px;
+  top: 18px;
+  opacity: 1;
 }
 
 .active .buttons {
-  padding: 0.5em 0;
+  padding: 0.3em 0;
   background-color: #eee;
   text-align: center;
   z-index: 10;
@@ -56,7 +61,17 @@
 }
 
 .active button {
-  display: block;
+  visibility: visible;
+  background-color: transparent;
+  font-size: 1.0em;
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease 0.1s;
+  -moz-transition: color 0.2s ease 0.1s;
+  transition: color 0.2s ease 0.1s;
+}
+
+.active button:hover {
+  color:#ccc;
 }
 
 .offscreen {

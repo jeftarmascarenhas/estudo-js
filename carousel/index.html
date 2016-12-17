@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="carousebox active">
+  <div class="carousebox">
     <div class="buttons">
       <button type="button" name="prev" class="prev"><<span class="offscreen">Previous</span> </button>
       <button type="button" name="next" class="next">><span class="offscreen">Next</span> </button>
@@ -19,10 +19,13 @@
     </ul>
   </div>
 
-<script type="text/javascript" src="js/carousel.js"></script>
+<script type="text/javascript" src="js/Carousel.js"></script>
 <script>
-  let show = new Carousel().showSelector();
-  console.log(show);
+  let carousel = new Carousel();
+  carousel.init(0);
+
+  console.log(carousel.showSelector());
+
 </script>
 </body>
 </html>
